@@ -1,0 +1,6 @@
+- name: Run docker
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Run docker compose
+      ansible.builtin.shell: docker compose up -d
